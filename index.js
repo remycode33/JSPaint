@@ -64,22 +64,55 @@ canvas.addEventListener('click',draw)
 
 /////////////////////////
 //DIV color
+let color
 
-for (let div of document.getElementsByTagName('div')){
+for (let i=0; i< document.getElementsByTagName('div').length; i++){
     let hexa = "0123456789ABCDEF"
     let hexaArr = hexa.split('')
+    
     function randomHex () {
       return   hexaArr[Math.round(Math.random()*15)]
-
     }
+    // let newcolor
+   switch(i == 0){
+    case true:
+        color = '#'
+        for(let i =1; i<=6;i++){
+            color += randomHex()
+        };
+        break;
 
-    let color = '#'
-    for(let i =1; i<=6;i++){
-        color += randomHex()
-    }
+    case false:
+        // colorToUpdate = document.getElementsByTagName('div')[i-1].style.background
+        let indexColor = color.split('')
+        indexColor.shift()
+        console.info('nos couleurs :',indexColor)
+        indexColor = indexColor.map( (ele) => { return hexaArr.indexOf(ele)}) // ON A NOTRE INDEX DE REF AUQEUL ON SOUHAITE INCR2MENTER LA PROCHAINE COULEUR
+        console.info('notre index de color :',indexColor)
+
+        for ( let j=0; j<indexColor.length; j++){
+            switch( (indexColor[j]+2) > (hexaArr.length)){
+
+                case  false :
+                indexColor[j] += 1;
+                console.log('index premier cas switch (inferieur) :',indexColor[j],indexColor)
+                break;
+
+                case true :
+         
+                indexColor[j] -= 14 ;
+                console.log('deuxieme cas swtich (supérieur) :',indexColor[j],indexColor)
+                break; 
+            }
+        }
+        color = '#'
+        for(index of indexColor){
+            color += hexa[index]
+        };
+        break;
     
-    Object.assign(div.style,{background:color})
-
+    }
+    Object.assign(document.getElementsByTagName('div')[i].style,{background:color})
 }
 
 /////
@@ -90,9 +123,9 @@ function pickColor(event) {
 
 }
 
-for( div of document.body.getElementsByTagName('div')){
-    console.log(div)
-    div.addEventListener('click',pickColor)
+for( let i =0; i <document.body.getElementsByTagName('div').length; i++){
+ 
+    document.body.getElementsByTagName('div')[i].addEventListener('click',pickColor)
 }
 
 ///// Undo function :
@@ -125,8 +158,8 @@ function setPenWidth(){
                 //   });
                 // });
 
-    window.addEventListener('load', () => {
-        let mybody = document.getElementsByTagName('body')[0];
-        mybody.style.visibility = 'inherit'
+window.addEventListener('load', () => {
+    let mybody = document.getElementsByTagName('body')[0];
+    mybody.style.visibility = 'inherit'
 
-    })
+})
