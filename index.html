@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="FR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet preconnect">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet preconnect">
-    <title>Mon Canvas</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet preconnect" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;900&display=swap"
+      rel="stylesheet preconnect"
+    />
+    <title>Paint your dreams</title>
+  </head>
 
-<body>
+  <body>
     <script src="index.js" async></script>
-    <h1> Draw your dreams... <span>🌈</span></h1>
+    <h1>Paint your dreams<span>&nbsp💭</span></h1>
     <canvas></canvas>
-    <button onclick="undo()">Oups je me suis trompé ! 3X</button>
-    <div class="color1" ></div><div class="color2"></div><div class="color3"></div><div class="color4"></div>
+    <button onclick="undo()">Undo (3x)</button>
+    <div class="color1"></div>
+    <div class="color2"></div>
+    <div class="color3"></div>
+    <div class="color4"></div>
     <div class="color5"></div>
-    <div class="color6"></div><div class="color"></div>
+    <div class="color6"></div>
     <div class="color"></div>
     <div class="color"></div>
     <div class="color"></div>
     <div class="color"></div>
     <div class="color"></div>
-    <input type="range" min="1" max="100">
-</body>
-
-
-
+    <div class="color"></div>
+    <box class="box">
+      <label for="name">Size</label
+      ><input name="size" type="range" min="1" max="100" />
+    </box>
+  </body>
 </html>

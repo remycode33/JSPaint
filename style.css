@@ -1,83 +1,100 @@
-html{
-    height: 2500px;
-    background-image: url(https://img.freepik.com/photos-gratuite/collage-concept-experience-immersive_23-2149498352.jpg?size=5000&ext=jpg); 
-    background-position: bottom;
-    background-size:cover ;
+html {
+  height: 100vh;
+  /* background-image: url(https://kaboompics.com/cache/6/9/c/7/9/69c791167b2ba5b7f08fd884eff48aeca2d24250.jpeg); */
+  background-image: url(https://kaboompics.com/cache/d/4/b/1/4/d4b1432a613099d7cd0d422e7c29d3395db09744.jpeg);
+  /* background-image: url(https://media.istockphoto.com/id/1146986931/fr/photo/table-en-bois-dessus-sur-fond-flou-clair-table-en-bois-brun-vide.jpg?s=612x612&w=0&k=20&c=57UG1vF9_Y0Zck2TQ2Aap-9k-F-zCHUjw7ZlkBPGaaA=); */
+  /* background-image: url(https://media.istockphoto.com/id/1140801024/fr/photo/bureau-vide-en-bois-sur-fond-de-caf%C3%A9-brouill%C3%A9.jpg?s=612x612&w=0&k=20&c=-HYX7lWWMBXX_3TAWckfcVSCbd5WJIeSc_9UAIM8uBo=); */
+  background-position: 20% 0%;
+  background-size: cover;
 }
-body{
-    /* position : fixed; */
-    position: fixed;
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    visibility:hidden;
-    align-items: flex-end;
-    /* background:linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
-    /* background: rgb(76, 76, 76); */
+body {
+  /* position : fixed; */
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  visibility: hidden;
+  align-items: flex-end;
+  /* background:linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+  /* background: rgb(76, 76, 76); */
 }
-div{
-    width:30px;
-    height:30px;
-    border:2px solid black;
-    border-radius: 8px;
-    margin: 10px;
-    box-shadow: 2px 2px black;
+div {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 2px 2px black;
+}
 
-}
-
-div:hover{
-    box-shadow: 1px 1px rgb(207, 207, 207);
-    border : 2px solid white;
+div:hover {
+  box-shadow: 1px 1px rgb(207, 207, 207);
+  border: 2px solid white;
 }
 
 canvas {
-    cursor :crosshair;
-    margin: 50px 10%;
-    /* border:0px solid rgb(40, 187, 255); */
-    padding:0;
-    box-shadow:1px 12px 20px 5px rgba(13, 13, 13, 0.69);
-    background: white;
-    border-radius:25px;
+  cursor: crosshair;
+  margin: 50px 10%;
+  /* border:0px solid rgb(40, 187, 255); */
+  padding: 0;
+  box-shadow: 10px 10px 30px 0px rgb(0, 0, 0);
+  background: rgb(39, 39, 39);
+  border-radius: 25px;
 }
 
-
-h1{
-    text-align: center;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 60px;
-    line-height: 1em;
-    color :rgb(243, 243, 243);
-    text-shadow: 0px 0px 30px rgb(142, 225, 255);
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 30px;
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 70px;
+  font-weight: 200;
+  line-height: 1em;
+  color: rgb(232, 232, 232);
+  text-shadow: 0px 0px 30px rgb(128, 128, 128);
+  /* text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 30px; */
 }
 
 button {
-    margin: 10px;
-    width:100px ;
-    height: 35px;
-    /* background: #AAAAAA ; */
-    /* border : 2px  #d3508f; */
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    color : #343434
+  margin: 10px;
+  width: 100px;
+  height: 35px;
+  /* background: #AAAAAA ; */
+  /* border : 2px  #d3508f; */
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #343434;
 }
 
-button:hover{
-    background: #e3e3e3;
+button:hover {
+  background: #e3e3e3;
 }
-input[type="range" i] {
-    align-self: center;
-    color:white!important;
+/* input[type="range" i] {
+  align-self: center;
+} */
+
+.box {
+  color: #343434;
+  font-family: "Roboto", sans-serif;
+
+  margin: 10px 10px 0px 10px;
+  align-self: center;
 }
 
-h1 span {
-    text-shadow: none;
-    font-size: 45px;
+label {
+  position: relative;
+  top: -4px;
+  padding-right: 10px;
+}
+
+label h1 span {
+  position: relative;
+  text-shadow: none;
+  font-size: 70px;
+  top: -22px;
 }
