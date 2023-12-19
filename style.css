@@ -9,6 +9,7 @@ html {
 }
 body {
   /* position : fixed; */
+  transform-style: preserve-3d;
   position: fixed;
   width: 100%;
   height: fit-content;
@@ -97,4 +98,17 @@ label h1 span {
   text-shadow: none;
   font-size: 70px;
   top: -22px;
+}
+
+.rotate {
+  animation: rotate 0.35s ease-in-out 0s 1 normal backwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 0, 0, 360deg);
+  }
 }

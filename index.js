@@ -140,6 +140,8 @@ for (let i = 0; i < document.body.getElementsByTagName("div").length; i++) {
 ///// Undo function :
 function undo() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  document.getElementsByTagName("canvas")[0].classList.add("rotate");
+
   historic.length > 1
     ? ctx.putImageData(historic[historic.length - 2], 0, 0)
     : (historic = []);
@@ -149,6 +151,10 @@ function undo() {
     historic = [];
   }
   console.log(historic);
+  setTimeout(() => {
+    document.getElementsByTagName("canvas")[0].classList.toggle("rotate");
+  }, 0.3);
+  document.getElementsByTagName("canvas")[0].classList.toggle("rotate");
 }
 
 // set width pen :
