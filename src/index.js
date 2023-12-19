@@ -157,6 +157,12 @@ function undo() {
   document.getElementsByTagName("canvas")[0].classList.toggle("rotate");
 }
 
+//ajout de la fonction dans l'objet window pour permettre d'y accéder via l'attribut du button dans l'html et pour simplifier. Car une fois bundlé le nom est minifié et non reconnu. si non il faudrait ajouter un gestionnaire d'evenement à la place.
+
+window.undo = function () {
+  undo();
+};
+
 // set width pen :
 
 function setPenWidth() {

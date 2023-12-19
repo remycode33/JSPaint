@@ -14,10 +14,12 @@
   </head>
 
   <body>
-    <script src="./dist/main.js" async></script>
+    <script src="./dist/polyfill.bundle.js"></script>
+    <script src="./dist/app.bundle.js" async></script>
     <h1>Paint your dreams<span>&nbsp💭</span></h1>
     <canvas></canvas>
-    <button onclick="undo()">Undo (3x)</button>
+    <!-- ajout de la fonction undo() dans l'objet window pour pouvoir y acceder après le bundling car le nom est minifié -->
+    <button onclick="window.undo()">Undo (3x)</button>
     <div class="color1"></div>
     <div class="color2"></div>
     <div class="color3"></div>
